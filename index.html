@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GCRP System</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-brand">
+        <strong>GCRP</strong>
+        <span>System</span>
+      </div>
+      <nav class="sidebar-nav" id="nav">
+        <button data-page="home" class="nav-item active">الرئيسية</button>
+        <button data-page="character" class="nav-item">الشخصيات والهوية</button>
+        <button data-page="bank" class="nav-item">البنك</button>
+        <button data-page="inventory" class="nav-item">الجرد</button>
+        <button data-page="jobs" class="nav-item">الوظائف</button>
+        <button data-page="police" class="nav-item">الشرطة</button>
+        <button data-page="paramedic" class="nav-item">الإسعاف</button>
+        <button data-page="justice" class="nav-item">العدل</button>
+        <button data-page="prison" class="nav-item">السجن</button>
+        <button data-page="cars" class="nav-item">المركبات</button>
+        <button data-page="store" class="nav-item">المتجر</button>
+        <button data-page="weapons" class="nav-item">متجر الأسلحة</button>
+        <button data-page="thefts" class="nav-item">السرقات</button>
+        <button data-page="phone" class="nav-item">الهاتف</button>
+        <button data-page="manufacturing" class="nav-item">التصنيع</button>
+        <button data-page="flight" class="nav-item">الطيران</button>
+        <button data-page="tickets" class="nav-item">التذاكر</button>
+        <button data-page="rules" class="nav-item">القوانين</button>
+        <button data-page="staff" class="nav-item">الإدارة</button>
+      </nav>
+    </aside>
+
+    <!-- Main -->
+    <main class="main">
+      <header class="topbar">
+        <button class="menu-btn" id="menuBtn">☰</button>
+        <div class="topbar-info">
+          <span id="activeCharName">لا توجد شخصية نشطة</span>
+          <span id="activeCharJob" class="muted"></span>
+        </div>
+        <div class="topbar-money">
+          <span>كاش: <b id="cashDisplay">0</b></span>
+          <span>بنك: <b id="bankDisplay">0</b></span>
+        </div>
+      </header>
+
+      <div class="content" id="content">
+        <!-- pages injected by JS -->
+      </div>
+    </main>
+  </div>
+
+  <div id="toast" class="toast"></div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
